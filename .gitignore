@@ -1,0 +1,32 @@
+# Rust / Cargo build artifacts
+target/
+**/target/
+
+# Executables
+*.exe
+*.exe~
+*.out
+*.app
+
+# IDE / Editor specific
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Backup / temporary files
+*.bak
+*.tmp
+*.log
+
+# Rust package manager files
+Cargo.lock
+
+# If you want to include Cargo.lock for binaries (not libraries), comment the above line out
+# For book practice, since multiple small examples exist, we’ll keep it ignored
+
+# Mac / Windows junk
+Thumbs.db
+Desktop.ini
+
