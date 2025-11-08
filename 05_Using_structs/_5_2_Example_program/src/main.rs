@@ -1,15 +1,11 @@
 fn main() {
-    let width1 = 30;
-    let height1 = 50;
+    let rect1 = (30, 50);
 
-    println!(
-        "The area of the rectangle is {} square pixels",
-        area(width1, height1)
-    );
+    println!("The area of the rectangle is {} square pixels", area(rect1));
 }
 
-// 하나의 사각형을 계산하는데 독립된 매개변수 2개를 받고 있다.
-// (두 매개변수의 연관성이 명확하지 않다!)
-fn area(width: u32, height: u32) -> u32 {
-    width * height
+// 하나의 튜플로 받아 매개변수 의미가 명확해짐.
+// 단, 여전히 인덱스로 표현되어 각 값이 무엇인지 뚜렷히 알기 어려움(높이? 너비?)
+fn area(dimensions: (u32, u32)) -> u32 {
+    dimensions.0 * dimensions.1
 }
