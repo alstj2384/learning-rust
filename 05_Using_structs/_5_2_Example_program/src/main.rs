@@ -8,13 +8,16 @@ fn main() {
         "The area of the rectangle is {} square pixels",
         area(&rect1)
     );
+
+    // :?는 디버그 출력을 사용한다는 의미이다.
+    println!("rect1 is {:?}", rect1);
 }
 
-// 구조체로 받음으로써 각 필드명을 명확히 알 수 있게 되었다.
 fn area(rectangle: &Rectangle) -> u32 {
     rectangle.width * rectangle.height
 }
 
+#[derive(Debug)]
 struct Rectangle {
     width: u32,
     height: u32,
