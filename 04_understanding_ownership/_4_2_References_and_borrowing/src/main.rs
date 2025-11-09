@@ -37,7 +37,8 @@ fn main() {
     println!("{}", r3);
 
     // --- 댕글링 참조가 생성되지 않음을 컴파일러가 보장해준다 ---
-    let reference_to_nothing = dangle(); // 실체없는 참조자가 반환된다.
+    // let reference_to_nothing = dangle(); // 실체없는 참조자가 반환된다.
+    // error[E0106]: missing lifetime specifier
 }
 
 fn calculate_length(s: &String) -> usize {
